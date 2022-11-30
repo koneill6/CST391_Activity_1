@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\bin\\www"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "protocol": "inspector",
+            "name": "Launch Express Debugger for app.js",
+            "runtimeExecutable": "node",
+            "program": "${workspaceFolder}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "protocol": "inspector",
+            "name": "Launch Express Debugger for index.js",
+            "runtimeExecutable": "node",
+            "program": "${workspaceFolder}/index.js"
+        },
+        {
+            "type": "node",
+            "name": "Play",
+            "request": "launch",
+            "protocol": "inspector",
+            "runtimeExecutable": "node",
+            "program": "${workspaceFolder}/index.js"
+        }
+    ]
+}
