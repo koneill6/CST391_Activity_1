@@ -7,9 +7,10 @@ export class Album
     private artist: string = "";
     private description: string = "";
     private year: number = 0;
+    private image: string = "";
     private tracks: Track[] = [];
 
-    constructor(id:number, title:string, artist:string, description:string, year:number, tracks:Track[])
+    constructor(id:number, title:string, artist:string, description:string, year:number, image: string, tracks:Track[])
     {
         this.id = id;
         this.title = title;
@@ -17,6 +18,7 @@ export class Album
         this.description = description;
         this.year = year;
         this.tracks = tracks;
+        this.image = image;
     }
 
     public get Id(): number {
@@ -55,6 +57,14 @@ export class Album
 
     public set Year(year: number) {
         this.year = year;
+    }
+
+    public get Image(): string {
+        return this.image;
+    }
+
+    public set Image(image: string) {
+        this.image = image;
     }
 
     public get Tracks(): Track[] {

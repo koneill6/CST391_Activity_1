@@ -4,13 +4,15 @@ export class Track
     private number: number = 0;
     private title: string = "";
     private lyrics: string = "";
+    private video: string = "";
 
-    constructor(id:number, number:number, title:string, lyrics:string)
+    constructor(id:number, number:number, title:string, lyrics:string, video:string)
     {
         this.id = id;
         this.number = number;
         this.title = title;
         this.lyrics = lyrics;
+        this.video = video;
     }
 
     public get Id(): number {
@@ -43,5 +45,13 @@ export class Track
     
     public set Lyrics(lyrics: string) {
         this.lyrics = lyrics;
+    }
+
+    public get Video(): string {
+        return this.video;
+    }
+
+    public set Video(video: string) {
+        this.video = video;
     }
 }
